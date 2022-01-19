@@ -2,23 +2,27 @@ class Solution {
 public:
     bool uniqueOccurrences(vector<int>& arr) {
         
-          int n = arr.size();
-        unordered_map<int,int>umap;
-        set<int> mset;
-        for(int i=0;i<n;i++)
-        {
-            umap[arr[i]]++;
-        }
-        auto itr = umap.begin();
+    map<int,int> mp;
+    set<int> st;
         
-        for(auto it:umap)
-        {
-            mset.insert(it.second);
-        }
-        if(umap.size() == mset.size())
-            return true;
+    for (auto x : arr) {
+
+        mp[x]++;
+    }
         
-        return false;
+    for (auto u : mp)
+    {
+        st.insert(u.second);
     }
        
+    if(mp.size()==st.size())
+    {
+        return true;
+    }
+        else
+        {
+            return false;
+        }
+        
+    }
 };
