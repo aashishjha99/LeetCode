@@ -13,7 +13,6 @@ public:
 
     for (auto x : mp)
     {
-
         if (x.second > 1)
         {
             ans.push_back(x.first);
