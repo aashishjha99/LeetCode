@@ -1,7 +1,9 @@
 class Solution {
     
     private:
-     private:
+     
+        private:
+    
         int getPivot(vector<int>& nums) {
 
         int s = 0;
